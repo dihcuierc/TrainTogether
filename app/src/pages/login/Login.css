@@ -1,0 +1,6 @@
+.auth-form {
+    padding: 16px;
+    max-width: 340px !important;
+    border: 1px solid #bcbbbb;
+    max-height: 300px !important;
+}

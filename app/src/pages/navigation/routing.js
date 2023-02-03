@@ -12,8 +12,8 @@ function Routing() {
                 <Route index element={<App/>}/>
                 <Route path="login" element={<Login/>}/>
                 <Route path="*" element={<ErrorPage/>}/>
+                <Route path="register" element={<Login/>}/>
             </Route>
-
         </Routes>
     </BrowserRouter>
     )
