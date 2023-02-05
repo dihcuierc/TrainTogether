@@ -9,30 +9,36 @@ import "./Navbar.css";
 function nav() {
     return (
     <>
-        <Navbar fixed="top" collapseOnSelect bg="dark" expand="lg" variant="dark">
-            <Container>
+        <Navbar collapseOnSelect bg="darkblue" expand="lg" variant="dark">
+            <Container fluid className="mx-4">
                 <LinkContainer to="/">
-                    <Navbar.Brand>TrainTogether</Navbar.Brand>
+                    <Navbar.Brand>
+                        <b>Train</b>
+                        Together
+                    </Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="navbar-nav"/>
                 <Navbar.Collapse id="navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="ms-auto">
                         <LinkContainer to="/">
-                            <Nav.Link>Home</Nav.Link>
+                            <Nav.Link className="mx-2">Workout</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/">
-                            <Nav.Link>Maps</Nav.Link>
+                        <LinkContainer to="/login">
+                            <Nav.Link className="mx-2">Exercise Facilities</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/register">
+                            <Nav.Link className="mx-2">Community</Nav.Link>
                         </LinkContainer>
                     </Nav>
-                    <Nav>
+                    <Nav className="ms-auto">
                         <LinkContainer to="/login">
                             <Nav.Link>
-                                <Button>Sign in</Button>
+                                <Button variant="outline-primary" className="text-light">Sign in</Button> {' '}
                             </Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/register">
                             <Nav.Link>
-                                <Button>Sign Up</Button>
+                                <Button variant="outline-secondary" className="text-light">Sign Up</Button>{' '}
                             </Nav.Link>
                         </LinkContainer>
                     </Nav>
