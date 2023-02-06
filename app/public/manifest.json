@@ -16,6 +16,11 @@
       "src": "images/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "images/ErrorBackground.jpg",
+      "type": "image/jpg",
+      "sizes": "6720x4480"
     }
   ],
   "start_url": ".",

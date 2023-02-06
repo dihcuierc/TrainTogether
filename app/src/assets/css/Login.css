@@ -1,0 +1,16 @@
+.auth-form {
+    max-width: 350px !important;
+    max-height: 300px !important;
+}
+
+.loginButton {
+    background-color: rgba(8,10,50,0.4) !important;
+    border: 0 !important;
+}
+
+.singpassLogo {
+    height: 20px;
+    width: 70px;
+    padding: 2px
+}
+
