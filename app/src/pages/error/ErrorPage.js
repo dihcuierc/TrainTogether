@@ -20,7 +20,7 @@ export default function ErrorPage() {
                         <h5>The Page You Requested Could Not Be Found!</h5>
                     <LinkContainer to="/">
                         <Nav.Link>
-                            <Button className="text-light border-2 px-3">Home</Button>{' '}
+                            <Button className="text-light border-2 px-3">Home</Button>
                         </Nav.Link>
                     </LinkContainer>
                 </Stack>
