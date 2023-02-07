@@ -9,6 +9,7 @@ import Image from "react-bootstrap/Image"
 import { Formik } from "formik";
 import * as Yup from 'yup';
 import "../../assets/css/Login.css";
+import singpass from "../../assets/images/singpass_logo_white.svg"
 
 
 const schema = Yup.object().shape({
@@ -75,8 +76,8 @@ function LoginForm() {
                         OR
                     </div>
                     <div className="d-grid gap-2 pt-2 mt-2">
-                        <Button variant="outline-secondary" className="border-1">
-                            Continue with <Image src="/images/singpass_logo_white.svg" className="singpassLogo" alt="Singpass"/>
+                        <Button variant="outline-secondary" className="border-1" type="submit">
+                            Continue with <Image src={singpass} className="singpassLogo" alt="Singpass"/>
                         </Button>
                         <Button
                             className="loginButton text-light"
