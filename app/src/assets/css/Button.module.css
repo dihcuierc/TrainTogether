@@ -1,0 +1,6 @@
+.auth {
+    background-color: rgba(8,10,50,0.4) !important;
+    border: 0 !important;
+    --bs-bg-opacity: 1;
+    color: rgb(var(--bs-light));
+}

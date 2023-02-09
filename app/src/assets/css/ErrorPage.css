@@ -1,9 +1,0 @@
-.bg-image {
-    background: url("../images/ErrorBackground.jpg") no-repeat center center fixed;
-    background-size: cover;
-}
-
-.errorPic {
-    height: 50vmin;
-    pointer-events: none;
-}

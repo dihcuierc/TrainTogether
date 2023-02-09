@@ -6,26 +6,45 @@ import {LinkContainer} from "react-router-bootstrap";
 import {Button} from "react-bootstrap";
 import "../../../assets/css/Navbar.css";
 
-const withoutSidebarRoutes = ["/login"];
+const withoutSidebarRoutes = ["/login","/register"];
 
 export default function NavigationBar() {
     const {pathname} = useLocation();
 
     const noSideBars = withoutSidebarRoutes.some((item) => pathname.includes(item));
 
-    const navbarToggle =
-        <>
+    return (
+    <>
+        <Navbar collapseOnSelect bg="darkblue" expand="lg" variant="dark">
+            <Container fluid className="mx-5">
+                <LinkContainer to="/">
+                    <Navbar.Brand>
+                        <b>Train</b>
+                        Together
+                    </Navbar.Brand>
+                </LinkContainer>
+                {noSideBars ? null : <NavigationToggle/>}
+            </Container>
+        </Navbar>
+        <Outlet/>
+    </>
+    )
+}
+
+function NavigationToggle() {
+    return(
+    <>
         <Navbar.Toggle aria-controls="navbar-nav"/>
         <Navbar.Collapse id="navbar-nav">
             <Nav className="ms-auto">
+                <LinkContainer to="/exercises">
+                    <Nav.Link className="mx-3">Workout</Nav.Link>
+                </LinkContainer>
                 <LinkContainer to="/">
-                    <Nav.Link className="mx-2">Workout</Nav.Link>
+                    <Nav.Link className="mx-3">Exercise Facilities</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/login">
-                    <Nav.Link className="mx-2">Exercise Facilities</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/register">
-                    <Nav.Link className="mx-2">Community</Nav.Link>
+                <LinkContainer to="/eateries">
+                    <Nav.Link className="mx-3">Hungry Go Where?</Nav.Link>
                 </LinkContainer>
             </Nav>
             <Nav className="ms-auto">
@@ -42,21 +61,5 @@ export default function NavigationBar() {
             </Nav>
         </Navbar.Collapse>
     </>
-
-    return (
-    <>
-        <Navbar collapseOnSelect bg="darkblue" expand="lg" variant="dark">
-            <Container fluid className="mx-5">
-                <LinkContainer to="/">
-                    <Navbar.Brand>
-                        <b>Train</b>
-                        Together
-                    </Navbar.Brand>
-                </LinkContainer>
-                {noSideBars ? null : navbarToggle}
-            </Container>
-        </Navbar>
-        <Outlet/>
-    </>
-    )
+)
 }
