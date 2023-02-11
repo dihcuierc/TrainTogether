@@ -24,11 +24,6 @@
     margin-top: 3rem!important;
 }
 
-.bgErrorPic {
-    background: url("../images/ErrorBackground.jpg") no-repeat center center fixed;
-    background-size: cover;
-}
-
 .singpass {
     height: 20px;
     width: 70px;

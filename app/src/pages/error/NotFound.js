@@ -6,15 +6,16 @@ import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
 import picStyle from  "../../assets/css/Pic.module.css";
+import background from "../../assets/css/Background.module.css"
 import errorPic from "../../assets/images/404Pic.svg"
 
 
 
-export default function ErrorPage() {
+export default function NotFound() {
     document.title = "404 Error Page";
     return (
-        <div className={picStyle.bgErrorPic}>
-            <Container className="d-flex min-vh-100">
+        <div className={background.error}>
+            <Container className="d-flex">
                 <Stack gap={4} className="align-items-center text-center">
                     <Image src={errorPic} className={picStyle.errorPic} alt="Error Picture"></Image>
                         <h3 className="fw-bold">404 Error - Page Not Found</h3>

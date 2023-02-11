@@ -1,0 +1,11 @@
+.error {
+    background: url("../images/ErrorBackground.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 92vh;
+}
+
+.default {
+    background: black no-repeat center center fixed;
+    background-size: cover;
+    min-height: 92vh;
+}

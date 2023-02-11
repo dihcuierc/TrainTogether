@@ -1,5 +1,16 @@
-.form {
+.login {
     max-width: 350px !important;
-    max-height: 300px !important;
+    max-height: 350px !important;
     margin-top: 1.5rem!important;
+}
+
+.register {
+    max-width: 350px !important;
+    max-height: 500px !important;
+    margin-top: 1.5rem !important;
+}
+
+.forget {
+    max-width: 350px !important;
+    max-height: 250px !important;
 }

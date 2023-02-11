@@ -1,10 +1,10 @@
-import {Outlet, Link, useLocation} from "react-router-dom";
+import {Outlet, useLocation} from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import {LinkContainer} from "react-router-bootstrap";
 import {Button} from "react-bootstrap";
-import "../../../assets/css/Navbar.css";
+import "../../assets/css/Navbar.css";
 
 const withoutSidebarRoutes = ["/login","/register"];
 
@@ -15,18 +15,18 @@ export default function NavigationBar() {
 
     return (
     <>
-        <Navbar collapseOnSelect bg="darkblue" expand="lg" variant="dark">
-            <Container fluid className="mx-5">
-                <LinkContainer to="/">
-                    <Navbar.Brand>
-                        <b>Train</b>
-                        Together
-                    </Navbar.Brand>
-                </LinkContainer>
-                {noSideBars ? null : <NavigationToggle/>}
-            </Container>
-        </Navbar>
-        <Outlet/>
+    <Navbar collapseOnSelect bg="darkblue" expand="lg" variant="dark" className="navbar-height">
+        <Container fluid className="mx-5">
+            <LinkContainer to="/">
+                <Navbar.Brand>
+                    <b>Train</b>
+                    Together
+                </Navbar.Brand>
+            </LinkContainer>
+            {noSideBars ? null : <NavigationToggle/>}
+        </Container>
+    </Navbar>
+    <Outlet/>
     </>
     )
 }
