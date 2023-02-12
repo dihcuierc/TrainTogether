@@ -13,12 +13,12 @@ import picStyle from "../../assets/css/Pic.module.css"
 import background from "../../assets/css/Background.module.css"
 import buttonStyle from "../../assets/css/Button.module.css"
 import formStyle from "../../assets/css/Form.module.css"
-import singpass from "../../assets/images/singpass_logo_white.svg"
+import singpass from "../../assets/images/icons/singpass_logo_white.svg"
 
 export default function Login() {
 
     return (
-        <div className={background.default}>
+        <div className={background.login}>
             <Stack gap={2}>
                 <div className="d-flex justify-content-end m-4 pe-3">
                     <div className="text-light mt-2 me-3">Already have an Account?</div>

@@ -16,7 +16,7 @@ import padding from "../../assets/css/Padding.module.css"
 
 export default function Register() {
     return (
-        <div className={`${background.default } d-flex`}>
+        <div className={`${background.login } d-flex`}>
             <Container className={padding.heading}>
                 <h2 className="text-light mx-3 mx-sm-0">
                     Welcome to <b>Train</b>Together!

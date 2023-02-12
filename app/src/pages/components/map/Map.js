@@ -1,8 +1,8 @@
-import logo from '../assets/images/logo.svg';
-import styles from "../assets/css/app.module.css"
-import picStyle from "../assets/css/Pic.module.css"
+import logo from '../../../assets/images/icons/logo.svg';
+import styles from "../../../assets/css/app.module.css"
+import picStyle from "../../../assets/css/Pic.module.css"
 
-function App() {
+function Map() {
   return (
     <div className={styles.App}>
       <header className={styles.header}>
@@ -23,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default Map;

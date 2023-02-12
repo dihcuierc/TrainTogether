@@ -10,7 +10,7 @@ import padding from "../../assets/css/Padding.module.css"
 
 export default function Forget() {
     return(
-        <div className={`${background.default } d-flex`}>
+        <div className={`${background.login } d-flex`}>
             <div className={`${padding.heading} mx-auto`}>
                 <div className={`${formStyle.forget} rounded p-3 bg-white`}>
                     <h2 className="text-black mb-4">
@@ -61,7 +61,7 @@ function ForgetForm() {
                 </Form.Group>
                 <div className="d-grid gap-2 pt-2 mt-2">
                     <Button
-                        className="bg-dark shadow"
+                        className="bg-dark border-dark"
                         type="submit"
                     ><h3>Send email</h3></Button>
                 </div>
