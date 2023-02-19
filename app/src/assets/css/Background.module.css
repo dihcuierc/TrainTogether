@@ -17,3 +17,8 @@
     background-size: cover;
     min-height: 92vh;
 }
+
+.profile {
+    background : wheat;
+    min-height: 92vh;
+}

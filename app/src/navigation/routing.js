@@ -7,21 +7,25 @@ import Forget from "../pages/login/Forget";
 import Facilities from "../pages/facilities/Facilities";
 import Exercise from "../pages/exercise/Exercise";
 import Verify from "../pages/register/Verify";
+import Profile from "../pages/profile/Profile";
 
 function Routing() {
     return (
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<Navbar/>}>
-                <Route path="facilities" index element={<Facilities/>}/>
+                <Route index element={<Facilities/>}/>
+                <Route path="/facilities" element={<Facilities/>}/>
                 <Route path="login" element={<Login/>}/>
                 <Route path="register" element={<Register/>}>
                     <Route path="otp" element={<Verify/>}/>
                 </Route>
+                <Route path="profile" element={<Profile/>}/>
                 <Route path="password">
                     <Route path="forget" element={<Forget/>}/>
                 </Route>
                 <Route path="exercises" element={<Exercise/>}/>
+
                 <Route path="*" element={<NotFound/>}/>
             </Route>
         </Routes>

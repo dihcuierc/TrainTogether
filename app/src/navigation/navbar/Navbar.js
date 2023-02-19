@@ -15,7 +15,7 @@ import LinkContainer from "react-router-bootstrap/LinkContainer";
 import pic from "../../assets/css/Pic.module.css"
 
 // #Custom CSS
-import "../../assets/css/Navbar.css";
+import "./Navbar.css";
 import profileIcon from "../../assets/images/icons/profile.svg"
 
 const noSidebarNonLoginRoutes = ["/login","/register"];
@@ -32,7 +32,7 @@ export default function NavigationBar() {
     <>
         <Navbar collapseOnSelect bg="darkblue" expand="lg" variant="dark">
             <Container fluid className="mx-2 mx-sm-5">
-                <LinkContainer to="/facilities">
+                <LinkContainer to="/">
                     <Navbar.Brand>
                         <b>Train</b>
                         Together
