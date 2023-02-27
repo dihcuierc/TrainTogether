@@ -1,0 +1,10 @@
+# IDE
+.idea/*
+.vscode/*
+
+# Package
+package-lock.json
+
+# Node Modules
+node_modules/*
+
