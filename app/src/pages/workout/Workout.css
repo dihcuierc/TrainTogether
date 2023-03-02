@@ -4,45 +4,60 @@
 }  
   
 .header-container {
-    display: flex;
-    align-items: center; /* align items vertically */
-    justify-content: space-between; /* align items horizontally */
-    margin-bottom: 20px; /* add some margin at the bottom */
-  }
-
-  body {
-    color: white;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: white;
-  }
-
-  .button-container {
-    display: flex;
-    justify-content: flex-end; /* align items to the right */
-  }
-  
-  .rectangle-button {
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 5px 10px; /* adjust the left and right padding */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px; /* adjust the font size */
-    line-height: 1.2;
-    width: 120px; /* adjust the width as needed */
-    margin-left: auto; /* push the button to the right side */
-    margin-right: 20px;
+  display: flex;
+  align-items: center; /* align items vertically */
+  justify-content: space-between; /* align items horizontally */
+  margin-bottom: 20px; /* add some margin at the bottom */
 }
 
-  .rectangle-button span {
-    display: block;
-  }
+body {
+  color: white;
+}
 
-  .ExerciseTitle {
-    margin-bottom: 30px;
-  }
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* align items to the right */
+}
+
+.rectangle-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px; /* adjust the left and right padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px; /* adjust the font size */
+  line-height: 1.2;
+  width: 120px; /* adjust the width as needed */
+  margin-left: auto; /* push the button to the right side */
+  margin-right: 20px;
+}
+
+.rectangle-button span {
+  display: block;
+}
+
+.ExerciseTitle {
+  margin-bottom: 30px;
+}
+
+h1{
+  color: white;
+  font-family: 'Raleway';
+  font-weight: 700 !important;
+  font-size: 50px !important;
+  text-align: center;
+}
+
+p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: center;
+}
