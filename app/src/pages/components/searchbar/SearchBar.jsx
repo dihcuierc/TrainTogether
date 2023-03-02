@@ -3,6 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
+import './SearchBar.css';
 
 
 export default function SearchBar(props) {
