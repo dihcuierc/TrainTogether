@@ -21,20 +21,34 @@ import Typography from '@mui/material/Typography';
 export default function Workout() {
     return (
         <div className={background.default}>
-            <div className="Greeting">
+            <div className="greeting">
                 <h1 className='title'>Hello, John</h1> 
                 <p>What would you like to do?</p> 
                 <SearchBar className="search-bar" placeholder="Search"/>
             </div>
-            <Carousel responsive={responsive} showDots={true} infinite={true}
->
-                <Card variant="outlined">{card}</Card>
-                <div>Item 2</div>
-                <div>Item 3</div>
-                <div>Item 4</div>
-                <div>Item 5</div>
-                <div>Item 6</div>
-            </Carousel>
+            <div className="carousel-container">
+              <h1>Exercise Plan</h1>
+              <Carousel responsive={responsive} showDots={true} infinite={true}>
+                  <Card variant="outlined">{card}</Card>
+                  <div>Item 2</div>
+                  <div>Item 3</div>
+                  <div>Item 4</div>
+                  <div>Item 5</div>
+                  <div>Item 6</div>
+              </Carousel>
+            </div>
+
+            <div className="carousel-container">
+              <h1>Exercises</h1>
+              <Carousel responsive={responsive} showDots={true} infinite={true}>
+                  <Card variant="outlined">{card}</Card>
+                  <div>Item 2</div>
+                  <div>Item 3</div>
+                  <div>Item 4</div>
+                  <div>Item 5</div>
+                  <div>Item 6</div>
+              </Carousel>
+            </div>
         </div>
 )
 }
@@ -88,34 +102,3 @@ const card = (
 </React.Fragment>
 );
 
-//     return (
-//         <div className={background.default}>
-//             <div className="Greeting" >
-//                 <h1>Hello, Joseph</h1>
-//                 <h2>What would you like to do?</h2>
-//             </div>
-//             <div className='Searchbar'>
-
-//             </div>
-//             <div className="ExercisePlans">
-//                 <div className="header-container">
-//                     <div className="ExercisePlanTitle"><h1>Exercise Plan</h1></div>
-//                     <button className="rectangle-button">
-//                         <span>Schedule</span>
-//                         <span>Exercise</span>
-//                     </button>
-//                 </div>
-//                 <div>
-//                     <Carousel images={[plan1, plan2, plan3, plan4, plan5]}/>
-//                 </div>
-//             </div>
-//             <div className='Space' style={{marginTop: '50px'}}></div>
-//             <div className="Exercises">
-//                 <h1>Exercises</h1>
-//             </div>
-//             <div>
-//                 <Carousel images={imageData}/>
-//             </div>
-//         </div>
-//     )
-// }
