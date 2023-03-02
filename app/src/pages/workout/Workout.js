@@ -30,11 +30,11 @@ export default function Workout() {
               <h1>Exercise Plan</h1>
               <Carousel responsive={responsive} showDots={true} infinite={true}>
                   <Card variant="outlined">{card}</Card>
-                  <div>Item 2</div>
-                  <div>Item 3</div>
-                  <div>Item 4</div>
-                  <div>Item 5</div>
-                  <div>Item 6</div>
+                  <div><img src={plan1} alt="Exercise Plan 1" /></div>
+                  <div><img src={plan2} alt="Exercise Plan 2" /></div>
+                  <div><img src={plan2} alt="Exercise Plan 2" /></div>
+                  <div><img src={plan2} alt="Exercise Plan 2" /></div>
+                  <div><img src={plan2} alt="Exercise Plan 2" /></div>
               </Carousel>
             </div>
 
