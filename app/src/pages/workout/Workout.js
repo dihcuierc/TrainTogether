@@ -1,22 +1,13 @@
 import background from "../../assets/css/Background.module.css"
 import './Workout.css';
 import React from 'react';
-// import Carousel from './Carousel';
-import plan1 from "../../assets/images/ExerciseImages/Image1.jpg";
-import plan2 from "../../assets/images/ExerciseImages/Image2.jpg";
-import plan3 from "../../assets/images/ExerciseImages/Image3.jpg";
-import plan4 from "../../assets/images/ExerciseImages/Image4.jpg";
-import plan5 from "../../assets/images/ExerciseImages/Image5.jpg";
-import { imageData } from "./imageData";
+import imageData from "./imageData";
+import planData from "./planData";
 import SearchBar from '../components/searchbar/SearchBar'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import ExerciseCard from "./ExerciseCard";
 
 export default function Workout() {
     return (
@@ -29,24 +20,18 @@ export default function Workout() {
             <div className="carousel-container">
               <h1>Exercise Plan</h1>
               <Carousel responsive={responsive} showDots={true} infinite={true}>
-                  <Card variant="outlined">{card}</Card>
-                  <div><img src={plan1} alt="Exercise Plan 1" /></div>
-                  <div><img src={plan2} alt="Exercise Plan 2" /></div>
-                  <div><img src={plan2} alt="Exercise Plan 2" /></div>
-                  <div><img src={plan2} alt="Exercise Plan 2" /></div>
-                  <div><img src={plan2} alt="Exercise Plan 2" /></div>
+                {planData.map((plan) => (
+                  <ExerciseCard key={plan.id} title={plan.title} />
+                ))}
               </Carousel>
             </div>
 
             <div className="carousel-container">
               <h1>Exercises</h1>
               <Carousel responsive={responsive} showDots={true} infinite={true}>
-                  <Card variant="outlined">{card}</Card>
-                  <div>Item 2</div>
-                  <div>Item 3</div>
-                  <div>Item 4</div>
-                  <div>Item 5</div>
-                  <div>Item 6</div>
+                  {imageData.map((image) => (
+                    <ExerciseCard key={image.id} imageUrl={image.path} title={image.alt} />
+                  ))}
               </Carousel>
             </div>
         </div>
@@ -77,28 +62,5 @@ const bull = (
 >
   •
 </Box>
-);
-const card = (
-<React.Fragment>
-  <CardContent>
-    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-      Word of the Day
-    </Typography>
-    <Typography variant="h5" component="div">
-      be{bull}nev{bull}o{bull}lent
-    </Typography>
-    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-      adjective
-    </Typography>
-    <Typography variant="body2">
-      well meaning and kindly.
-      <br />
-      {'"a benevolent smile"'}
-    </Typography>
-  </CardContent>
-  <CardActions>
-    <Button size="small">Learn More</Button>
-  </CardActions>
-</React.Fragment>
 );
 

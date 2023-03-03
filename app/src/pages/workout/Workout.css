@@ -74,3 +74,11 @@ p{
   justify-content: space-between; /* align items horizontally */
   margin-bottom: 20px; /* add some margin at the bottom */
 }
+
+.card {
+width: 317px !important;
+height: 371px !important;
+background: rgba(213, 197, 197, 0.31) !important;
+border-radius: 30px;
+
+}

@@ -1,18 +1,29 @@
-export const imageData = [
+const imageData = [
     {
-      path: "../../assets/images/ExerciseImages/Image6.jpg",
-      alt: "Image 6"
+      id: 1,
+      path: require("../../assets/images/ExerciseImages/InclineBicepCurl.gif"),
+      alt: "Incline Bicep Curl"
     },
     {
-      path: "../../assets/images/ExerciseImages/Image7.jpg",
-      alt: "Image 7"
+      id: 2,
+      path: require("../../assets/images/ExerciseImages/ConcentrationCurl.gif"),
+      alt: "Concentration Curl"
     },
     {
-      path: "../../assets/images/ExerciseImages/Image8.jpg",
-      alt: "Image 8"
+      id: 3,
+      path: require("../../assets/images/ExerciseImages/TwistingDumbbellCurl.gif"),
+      alt: "Twisting Dumbbell Curl"
     },
     {
-      path: "../../assets/images/ExerciseImages/Image9.jpg",
-      alt: "Image 9"
-    }
+      id: 4,
+      path: require("../../assets/images/ExerciseImages/UnderhandSeatedRow.gif"),
+      alt: "Underhand Seated Row"
+    },
+    {
+      id: 5,
+      path: require("../../assets/images/ExerciseImages/ReverseCurlStraightBar.gif"),
+      alt: "Reverse Curl Straight Bar"
+    },
   ];
+
+  export default imageData;
