@@ -21,7 +21,7 @@ export default function Workout() {
               <h1>Exercise Plan</h1>
               <Carousel responsive={responsive} showDots={true} infinite={true}>
                 {planData.map((plan) => (
-                  <ExerciseCard key={plan.id} title={plan.title} />
+                  <ExerciseCard type="exerciseplan" key={plan.id} title={plan.title} />
                 ))}
               </Carousel>
             </div>
@@ -30,7 +30,7 @@ export default function Workout() {
               <h1>Exercises</h1>
               <Carousel responsive={responsive} showDots={true} infinite={true}>
                   {imageData.map((image) => (
-                    <ExerciseCard key={image.id} imageUrl={image.path} title={image.alt} />
+                    <ExerciseCard type="exercise" key={image.id} imageUrl={image.path} title={image.alt} />
                   ))}
               </Carousel>
             </div>
