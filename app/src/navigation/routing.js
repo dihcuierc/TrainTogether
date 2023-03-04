@@ -5,9 +5,11 @@ import NotFound from "../pages/error/NotFound";
 import Register from "../pages/register/Register"
 import Forget from "../pages/login/Forget";
 import Facilities from "../pages/facilities/Facilities";
-import Exercise from "../pages/exercise/Exercise";
 import Verify from "../pages/register/Verify";
 import Profile from "../pages/profile/Profile";
+import ExercisePlan from '../pages/exerciseplan/ExercisePlan';
+import Exercise from '../pages/exercise/Exercise';
+import Workout from '../pages/workout/Workout';
 
 function Routing() {
     return (
@@ -24,10 +26,11 @@ function Routing() {
                 <Route path="password">
                     <Route path="forget" element={<Forget/>}/>
                 </Route>
-                <Route path="exercises" element={<Exercise/>}/>
-
+                <Route path="workout" element={<Workout/>}/>
+                <Route path="workout/exerciseplan" element={<ExercisePlan/>}/>
+                <Route path="workout/exercise" element={<Exercise/>}/>                
                 <Route path="*" element={<NotFound/>}/>
-            </Route>
+           </Route>
         </Routes>
     </BrowserRouter>
     )
