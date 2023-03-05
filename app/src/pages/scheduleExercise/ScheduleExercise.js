@@ -10,42 +10,89 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DesktopTimePicker } from "@mui/x-date-pickers/DesktopTimePicker";
 import { Typography } from "@mui/material";
+import { TextField } from "@mui/material";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 import dayjs from "dayjs";
 import Stack from "react-bootstrap/esm/Stack";
+import planData from "../workout/planData.json";
 
 export default function ScheduleExercise() {
   const [date, setDate] = React.useState(new Date());
   const [startTime, setStartTime] = React.useState(date.getTime());
   const [endTime, setEndTime] = React.useState(date.getTime() + 3600000);
+  const [location, setLocation] = React.useState("");
+  const [exercisePlan, setExercisePlan] = React.useState("");
 
   return (
     <div className={background.default}>
       {console.log(startTime)}
       <h1 className={padding.headerTop}>Schedule Exercise</h1>
-      <Stack className="stack-container" gap={5}>
+      <Stack className="stack-container" gap={3}>
         <Calendar onChange={setDate} value={date} calendarType="US" />
         {console.log(date)}
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <div className="row-item">
-            <Typography sx={{left: "20px"}}>Start Time</Typography>
+          <div className="row-item">
+            <Typography sx={{ left: "20px" }}>Start Time</Typography>
             <DesktopTimePicker
-              defaultValue={dayjs(startTime)}
+              value={dayjs(startTime)}
               ampm={false}
-              sx={{ width: "200px", marginLeft: "20px", "& .MuiInputBase-input": {color: "white" }}}
+              onChange={(newValue) => setStartTime(newValue)}
+              sx={{
+                marginLeft: "20px",
+                "& .MuiInputBase-input": { color: "white" },
+              }}
             />
+            {console.log(startTime)}
           </div>
-
-          <div className="row-item" style={{marginBottom: "5rem"}}>
+          <div className="row-item">
             <Typography>End Time</Typography>
             <DesktopTimePicker
-              defaultValue={dayjs(endTime)}
+              value={dayjs(endTime)}
               ampm={false}
-              sx={{ width: "200px", marginLeft: "20px", "& .MuiInputBase-input": {color: "white" }}}
+              sx={{
+                marginLeft: "20px",
+                "& .MuiInputBase-input": { color: "white" },
+              }}
             />
           </div>
-
         </LocalizationProvider>
-
+        <div className="row-item">
+          <Typography>Location</Typography>
+          <TextField
+            required
+            label="Required"
+            placeholder="Enter Location"
+            onChange={(e) => setLocation(e.target.value)}
+            sx={{
+              "& .MuiInputBase-input": { color: "white" },
+            }}
+          />
+        </div>
+        <div className="row-item" style={{ marginBottom: "5rem" }}>
+          <Typography>Exercise Plan</Typography>
+          <Box sx={{ width: "223px" }}>
+            <FormControl
+              fullWidth
+              sx={{
+                "& .MuiInputBase-input": { color: "white" },
+              }}
+            >
+              <InputLabel>Exercise Plan</InputLabel>
+              <Select
+                onChange={(e) => setExercisePlan(e.target.value)}
+              >
+                {planData.map((plan) => (
+                  <MenuItem value={plan.title}>{plan.title}</MenuItem>
+                ))}
+              </Select>
+              {console.log(exercisePlan)}
+            </FormControl>
+          </Box>
+        </div>
       </Stack>
     </div>
   );
