@@ -10,7 +10,7 @@ export default function ExerciseCarousel() {
     return (
         <div className={background.default}>
             <div className="carousel-container">
-              <h1>Exercises</h1>
+              <h1>Arms</h1>
               <Carousel responsive={responsive} showDots={true} infinite={true}>
                   {exercsieData.map((exercise) => (
                     <ExerciseCard link="exercise" key={exercise.id} imageUrl={exercise.path} title={exercise.alt} />

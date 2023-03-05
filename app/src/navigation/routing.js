@@ -11,6 +11,7 @@ import ExercisePlan from '../pages/exerciseplan/ExercisePlan';
 import ExerciseCarousel from '../pages/exercisecarousel/ExerciseCarousel';
 import Exercise from '../pages/exercise/Exercise';
 import Workout from '../pages/workout/Workout';
+import ScheduleExercise from '../pages/scheduleExercise/ScheduleExercise';
 
 function Routing() {
     return (
@@ -28,6 +29,7 @@ function Routing() {
                     <Route path="forget" element={<Forget/>}/>
                 </Route>
                 <Route path="workout" element={<Workout/>}/>
+                <Route path="workout/schedule-exercise" element={<ScheduleExercise/>}/>
                 <Route path="workout/exerciseplan" element={<ExercisePlan/>}/>
                 <Route path="workout/exerciseview" element={<ExerciseCarousel/>}/>     
                 <Route path="workout/exerciseview/exercise" element={<Exercise/>}/>       

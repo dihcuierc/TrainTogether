@@ -66,18 +66,32 @@ p{
   margin-left: 5rem;
   gap: 2rem;
 }
-  
-.header-container {
-  display: flex;
-  align-items: center; /* align items vertically */
-  justify-content: space-between; /* align items horizontally */
-  margin-bottom: 20px; /* add some margin at the bottom */
-}
 
 .card {
 width: 317px !important;
 height: 371px !important;
 background: rgba(213, 197, 197, 0.31) !important;
 border-radius: 30px;
+}
 
+.header-container{
+  display: flex;
+  align-items: center; /* align items vertically */
+  justify-content: space-between; /* align items horizontally */
+  margin-bottom: 20px; /* add some margin at the bottom */
+}
+
+.schedule-exercise-btn{
+  position: relative;
+  right: 3rem;
+  width: 156px;
+  height: 65px;
+  background: linear-gradient(91.93deg, #F03F58 1.39%, #FB5C51 101.04%);
+  color: white;
+  border-radius: 30px;
+  border: None;
+  font-size: 20px;
+  font-family: 'Raleway';
+  font-weight: 700;
+  line-height: 24px;
 }
