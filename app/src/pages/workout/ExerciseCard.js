@@ -5,7 +5,7 @@ import CardHeader from '@mui/material/CardHeader';
 
 export default function ExerciseCard(props) {
     return (
-      <Link to={props.type}>
+      <Link to={props.link}>
         <Card className="card">
           <CardHeader
             title={props.title}
