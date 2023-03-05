@@ -1,8 +1,8 @@
 import background from "../../assets/css/Background.module.css"
 import './Workout.css';
 import React from 'react';
-import imageData from "./imageData";
-import planData from "./planData";
+import exercsieData from "./exercisesData.json";
+import planData from "./planData.json";
 import SearchBar from '../components/searchbar/SearchBar'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -29,8 +29,8 @@ export default function Workout() {
             <div className="carousel-container">
               <h1>Exercises</h1>
               <Carousel responsive={responsive} showDots={true} infinite={true}>
-                  {imageData.map((image) => (
-                    <ExerciseCard type="exercise" key={image.id} imageUrl={image.path} title={image.alt} />
+                  {exercsieData.map((exercise) => (
+                    <ExerciseCard type="exercise" key={exercise.id} imageUrl={exercise.path} title={exercise.alt} />
                   ))}
               </Carousel>
             </div>
@@ -41,7 +41,7 @@ export default function Workout() {
 const responsive = {
 desktop: {
   breakpoint: { max: 3000, min: 1024 },
-  items: 3,
+  items: 4,
   slidesToSlide: 1 // optional, default to 1.
 },
 tablet: {
