@@ -29,8 +29,8 @@ function Routing() {
                 </Route>
                 <Route path="workout" element={<Workout/>}/>
                 <Route path="workout/exerciseplan" element={<ExercisePlan/>}/>
-                <Route path="workout/exercise" element={<Exercise/>}/>       
-                <Route path="workout/exerciseview" element={<ExerciseCarousel/>}/>         
+                <Route path="workout/exerciseview" element={<ExerciseCarousel/>}/>     
+                <Route path="workout/exerciseview/exercise" element={<Exercise/>}/>       
                 <Route path="*" element={<NotFound/>}/>
            </Route>
         </Routes>
