@@ -6,7 +6,6 @@ import planData from "./planData.json";
 import SearchBar from '../components/searchbar/SearchBar'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Box from '@mui/material/Box';
 import ExerciseCard from "./ExerciseCard";
 
 export default function Workout() {
@@ -21,7 +20,7 @@ export default function Workout() {
               <h1>Exercise Plan</h1>
               <Carousel responsive={responsive} showDots={true} infinite={true}>
                 {planData.map((plan) => (
-                  <ExerciseCard type="exerciseplan" key={plan.id} title={plan.title} />
+                  <ExerciseCard link="exerciseplan" key={plan.id} title={plan.title} />
                 ))}
               </Carousel>
             </div>
@@ -30,7 +29,7 @@ export default function Workout() {
               <h1>Exercises</h1>
               <Carousel responsive={responsive} showDots={true} infinite={true}>
                   {exercsieData.map((exercise) => (
-                    <ExerciseCard type="exercise" key={exercise.id} imageUrl={exercise.path} title={exercise.alt} />
+                    <ExerciseCard link="exerciseview" key={exercise.id} title={exercise.title} />
                   ))}
               </Carousel>
             </div>
@@ -55,12 +54,4 @@ mobile: {
   slidesToSlide: 1 // optional, default to 1.
 }
 };
-const bull = (
-<Box
-  component="span"
-  sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
->
-  •
-</Box>
-);
 

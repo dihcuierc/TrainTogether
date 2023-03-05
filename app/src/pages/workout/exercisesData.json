@@ -1,27 +1,26 @@
 [
   {
     "id": 1,
-    "path": "/images/ExerciseImages/InclineBicepCurl.gif",
-    "alt": "Incline Bicep Curl"
+    "title": "Chest"
   },
   {
     "id": 2,
-    "path": "/images/ExerciseImages/ConcentrationCurl.gif",
-    "alt": "Concentration Curl"
+    "title": "Back"
   },
   {
     "id": 3,
-    "path": "/images/ExerciseImages/TwistingDumbbellCurl.gif",
-    "alt": "Twisting Dumbbell Curl"
+    "title": "Legs"
   },
   {
     "id": 4,
-    "path": "/images/ExerciseImages/UnderhandSeatedRow.gif",
-    "alt": "Underhand Seated Row"
+    "title": "Arms"
   },
   {
     "id": 5,
-    "path": "/images/ExerciseImages/ReverseCurlStraightBar.gif",
-    "alt": "Reverse Curl Straight Bar"
+    "title": "Shoulders"
+  },
+  {
+    "id": 6,
+    "title": "Abs"
   }
 ]

@@ -8,6 +8,7 @@ import Facilities from "../pages/facilities/Facilities";
 import Verify from "../pages/register/Verify";
 import Profile from "../pages/profile/Profile";
 import ExercisePlan from '../pages/exerciseplan/ExercisePlan';
+import ExerciseCarousel from '../pages/exercisecarousel/ExerciseCarousel';
 import Exercise from '../pages/exercise/Exercise';
 import Workout from '../pages/workout/Workout';
 
@@ -28,7 +29,8 @@ function Routing() {
                 </Route>
                 <Route path="workout" element={<Workout/>}/>
                 <Route path="workout/exerciseplan" element={<ExercisePlan/>}/>
-                <Route path="workout/exercise" element={<Exercise/>}/>                
+                <Route path="workout/exercise" element={<Exercise/>}/>       
+                <Route path="workout/exerciseview" element={<ExerciseCarousel/>}/>         
                 <Route path="*" element={<NotFound/>}/>
            </Route>
         </Routes>
