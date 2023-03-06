@@ -7,7 +7,7 @@ import './Tracker.css'
 export default function Tracker() {
     return (
         <>
-            <Card>
+            <Card className="Calories-tracker">
                 <Card.Title>Calories Burnt</Card.Title>
                 <Card.Body className="d-flex justify-content-center">
                     <CircularProgressbar counterClockwise={true} background={true} value={556} text={`556/1500 calories`} maxValue={1500} strokeWidth={3} className="d-inline-flex" />

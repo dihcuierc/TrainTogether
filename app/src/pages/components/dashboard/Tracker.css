@@ -14,5 +14,13 @@
 
 .CircularProgressbar-text {
     fill: white!important;
-    font-size: 1.5vmin!important;
+    font-size: 1vmin!important;
 }
+
+.Calories-tracker {
+    width: 317px !important;
+    height: 371px !important;
+    background: rgba(213, 197, 197, 0.31) !important;
+    border-radius: 30px !important;
+    }
+
